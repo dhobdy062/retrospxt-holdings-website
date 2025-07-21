@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrospxt Holdings LLC - Enabling the Future Through Agentic Solutions</title>
+    <meta name="description" content="Retrospxt Holdings LLC enables the future for businesses through agentic solutions, training, and thought leadership. AI voice agents, marketing automation, and community training for small businesses.">
+    <!-- Original styles for compatibility -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Modular CSS Architecture (additional) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>RETROSPXT</h2>
+                <span>HOLDINGS, LLC</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#training" class="nav-link">Training</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#newsletter" class="nav-link">Newsletter</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn-secondary" onclick="openModal('community-modal')">Join Community</button>
+                <button class="btn-primary" onclick="openModal('schedule-modal')">Schedule Consultation</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Enabling the Future for Businesses Through 
+                    <span class="gradient-text">Agentic Solutions</span>
+                </h1>
+                <p class="hero-subtitle">
+                    We build AI voice agents, marketing automation, and train communities to help small businesses implement AI strategies that drive real results.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-primary large" onclick="openModal('schedule-modal')">
+                        Schedule Consultation
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                    <button class="btn-secondary large" onclick="openModal('community-modal')">
+                        Join Our Community
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <div class="ai-indicator"></div>
+                        <span>AI Agent Active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Solutions</h2>
+                <p>Comprehensive AI-powered services designed to transform your business operations</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <img src="assets/images/ai-voice-icon.png" alt="AI Voice Agents">
+                    </div>
+                    <h3>AI Voice Agents</h3>
+                    <p>Intelligent conversational AI that handles customer interactions 24/7, providing personalized experiences and driving engagement.</p>
+                    <ul class="service-features">
+                        <li>Natural language processing</li>
+                        <li>Multi-language support</li>
+                        <li>Custom voice training</li>
+                        <li>Real-time analytics</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openModal('schedule-modal')">Learn More</button>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <img src="assets/images/automation-icon.png" alt="Marketing Automation">
+                    </div>
+                    <h3>Marketing Automation</h3>
+                    <p>Streamlined workflows that nurture leads, engage customers, and drive conversions through intelligent automation.</p>
+                    <ul class="service-features">
+                        <li>Lead scoring & nurturing</li>
+                        <li>Email campaign automation</li>
+                        <li>Social media management</li>
+                        <li>Performance tracking</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openModal('schedule-modal')">Learn More</button>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <img src="assets/images/training-icon.png" alt="Custom Solutions">
+                    </div>
+                    <h3>Custom Solutions (Tulbox)</h3>
+                    <p>Tailored AI implementations designed specifically for your business needs and industry requirements.</p>
+                    <ul class="service-features">
+                        <li>Custom AI model development</li>
+                        <li>Integration consulting</li>
+                        <li>Scalable architecture</li>
+                        <li>Ongoing support</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openModal('schedule-modal')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="training">
+        <div class="container">
+            <div class="training-content">
+                <div class="training-text">
+                    <h2>Build Happy People</h2>
+                    <p class="section-subtitle">Community-driven AI strategy training for small businesses</p>
+                    <p>Our comprehensive training program empowers small business owners and their teams to successfully implement AI strategies. Through hands-on workshops, peer learning, and expert guidance, we build confident, capable teams ready for the AI-powered future.</p>
+                    
+                    <div class="training-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✨</div>
+                            <div>
+                                <h4>Hands-on Workshops</h4>
+                                <p>Interactive sessions with real-world AI implementation scenarios</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🤝</div>
+                            <div>
+                                <h4>Peer Learning Network</h4>
+                                <p>Connect with other business owners on similar AI journeys</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <div>
+                                <h4>Expert Guidance</h4>
+                                <p>Direct access to AI strategy experts and implementation specialists</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="training-cta">
+                        <button class="btn-primary" onclick="openModal('community-modal')">Start Learning</button>
+                        <button class="btn-outline" onclick="openModal('schedule-modal')">Schedule Demo</button>
+                    </div>
+                </div>
+                <div class="training-visual">
+                    <div class="training-stats glass-card">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Businesses Trained</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Community Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-content glass-card">
+                <div class="newsletter-text">
+                    <h2>The Priceless & The Pointless</h2>
+                    <p>Our weekly newsletter cuts through the AI hype to deliver actionable insights that matter to your business. Get the priceless strategies while avoiding the pointless trends.</p>
+                    
+                    <div class="newsletter-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💡</span>
+                            <span>Weekly AI strategy insights</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔍</span>
+                            <span>Industry trend analysis</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🛠️</span>
+                            <span>Practical implementation tips</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📈</span>
+                            <span>Case studies & success stories</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="newsletter-form">
+                    <form id="newsletter-signup" class="glass-form">
+                        <h3>Subscribe Now</h3>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" placeholder="Your company name">
+                            <label for="company">Company (Optional)</label>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">
+                            Subscribe to Newsletter
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                        <p class="form-note">Join 2,000+ business leaders getting weekly insights</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join Our Community</h2>
+                <p>Connect with forward-thinking business leaders implementing AI strategies</p>
+            </div>
+            
+            <div class="community-grid">
+                <div class="community-benefit glass-card">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Exclusive Access</h3>
+                    <p>Get early access to new tools, resources, and training materials before they're publicly available.</p>
+                </div>
+                
+                <div class="community-benefit glass-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Expert Q&A Sessions</h3>
+                    <p>Monthly live sessions with AI experts answering your specific business questions.</p>
+                </div>
+                
+                <div class="community-benefit glass-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Peer Networking</h3>
+                    <p>Connect with other business owners facing similar AI implementation challenges.</p>
+                </div>
+                
+                <div class="community-benefit glass-card">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Resource Library</h3>
+                    <p>Access our comprehensive library of templates, guides, and implementation frameworks.</p>
+                </div>
+            </div>
+            
+            <div class="community-cta">
+                <button class="btn-primary large" onclick="openModal('community-modal')">Join Community</button>
+                <p class="community-note">Free to join • 1,500+ active members</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Insights</h2>
+                <p>Stay ahead with our latest thoughts on AI, automation, and business transformation</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <div class="blog-category">AI Strategy</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>The Future of AI Voice Agents in Small Business</h3>
+                        <p>Discover how AI voice agents are revolutionizing customer service and sales for small businesses, with practical implementation strategies.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 15, 2024</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <div class="blog-category">Automation</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Marketing Automation That Actually Works</h3>
+                        <p>Cut through the hype and learn which marketing automation strategies deliver real ROI for growing businesses.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 10, 2024</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-image">
+                        <div class="blog-category">Community</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Building AI-Ready Teams: A Leadership Guide</h3>
+                        <p>Essential strategies for preparing your team for AI integration, from training to change management.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 5, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-cta">
+                <button class="btn-primary" onclick="openModal('newsletter-modal')">Subscribe for More Insights</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Retrospxt Holdings</h2>
+                    <p class="section-subtitle">Pioneering the future of business through intelligent automation and community-driven learning</p>
+                    
+                    <p>Founded on the belief that every business deserves access to cutting-edge AI technology, Retrospxt Holdings LLC has been at the forefront of making artificial intelligence accessible and practical for small and medium businesses.</p>
+                    
+                    <p>Our mission extends beyond just providing technology solutions. We're building a community of forward-thinking business leaders who understand that the future belongs to those who can effectively integrate AI into their operations while maintaining the human touch that makes businesses special.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years of Innovation</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Businesses Served</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">AI Solutions Deployed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="vision-card glass-card">
+                        <h3>Our Vision</h3>
+                        <p>A world where every business, regardless of size, can harness the power of AI to create meaningful connections with their customers and drive sustainable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>RETROSPXT</h3>
+                    <span>HOLDINGS, LLC</span>
+                    <p>Enabling the future for businesses through agentic solutions, training, and thought leadership.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#services">AI Voice Agents</a>
+                        <a href="#services">Marketing Automation</a>
+                        <a href="#services">Custom Solutions</a>
+                        <a href="#training">Training Programs</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="#community">Join Community</a>
+                        <a href="#newsletter">Newsletter</a>
+                        <a href="#training">Build Happy People</a>
+                        <a href="#">Resource Library</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Sub-brands</h4>
+                        <a href="#">Tulbox</a>
+                        <a href="#training">Build Happy People</a>
+                        <a href="#newsletter">The Priceless & The Pointless</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Retrospxt Holdings LLC. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="schedule-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close" onclick="closeModal('schedule-modal')">&times;</span>
+            <h2>Schedule a Consultation</h2>
+            <p>Let's discuss how AI can transform your business. Choose a time that works for you.</p>
+            
+            <form id="schedule-form" class="glass-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" placeholder="Your email" required>
+                        <label for="contact-email">Email Address</label>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="company-name" placeholder="Company name" required>
+                        <label for="company-name">Company Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone number">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <select id="service-interest" required>
+                        <option value="">Select your primary interest</option>
+                        <option value="ai-voice">AI Voice Agents</option>
+                        <option value="automation">Marketing Automation</option>
+                        <option value="custom">Custom Solutions (Tulbox)</option>
+                        <option value="training">Training Programs</option>
+                        <option value="general">General Consultation</option>
+                    </select>
+                    <label for="service-interest">Service Interest</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" placeholder="Tell us about your business and goals" rows="4"></textarea>
+                    <label for="message">Message (Optional)</label>
+                </div>
+                
+                <button type="submit" class="btn-primary full-width">
+                    Schedule Consultation
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="community-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close" onclick="closeModal('community-modal')">&times;</span>
+            <h2>Join Our Community</h2>
+            <p>Connect with 1,500+ business leaders implementing AI strategies. It's free to join!</p>
+            
+            <form id="community-form" class="glass-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="member-name" placeholder="Your name" required>
+                        <label for="member-name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="member-email" placeholder="Your email" required>
+                        <label for="member-email">Email Address</label>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="member-company" placeholder="Company name">
+                        <label for="member-company">Company Name</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="business-size">
+                            <option value="">Select business size</option>
+                            <option value="solo">Solo entrepreneur</option>
+                            <option value="small">2-10 employees</option>
+                            <option value="medium">11-50 employees</option>
+                            <option value="large">50+ employees</option>
+                        </select>
+                        <label for="business-size">Business Size</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <select id="ai-experience" required>
+                        <option value="">Select your AI experience level</option>
+                        <option value="beginner">Beginner - Just getting started</option>
+                        <option value="intermediate">Intermediate - Some experience</option>
+                        <option value="advanced">Advanced - Actively implementing AI</option>
+                        <option value="expert">Expert - Leading AI initiatives</option>
+                    </select>
+                    <label for="ai-experience">AI Experience Level</label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter-opt-in" checked>
+                        <span class="checkmark"></span>
+                        Also subscribe to "The Priceless & The Pointless" newsletter
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-primary full-width">
+                    Join Community
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </button>
+                
+                <p class="form-note">By joining, you agree to our community guidelines and privacy policy.</p>
+            </form>
+        </div>
+    </div>
+ 
+    <!-- Original script for compatibility -->
+    <script src="script.js"></script>
+    <!-- Modular JavaScript Architecture (additional) -->
+    <script type="module" src="js/modules/navigation.js"></script>
+    <script type="module" src="js/modules/scroll-effects.js"></script>
+    <script type="module" src="js/modules/animations.js"></script>
+    <script type="module" src="js/modules/modals.js"></script>
+    <script type="module" src="js/modules/forms.js"></script>
+    <script type="module" src="js/modules/mobile-menu.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="voiceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Microphone body -->
+  <rect x="26" y="16" width="12" height="20" rx="6" fill="url(#voiceGradient)"/>
+  
+  <!-- Microphone stand -->
+  <rect x="30" y="36" width="4" height="12" fill="url(#voiceGradient)"/>
+  
+  <!-- Base -->
+  <rect x="22" y="48" width="20" height="4" rx="2" fill="url(#voiceGradient)"/>
+  
+  <!-- Sound waves -->
+  <path d="M16 24 C16 20, 20 16, 24 16" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M48 24 C48 20, 44 16, 40 16" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <path d="M12 28 C12 22, 18 16, 24 16" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M52 28 C52 22, 46 16, 40 16" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.4"/>
+  
+  <path d="M8 32 C8 24, 16 16, 24 16" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.2"/>
+  <path d="M56 32 C56 24, 48 16, 40 16" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.2"/>
+</svg>
