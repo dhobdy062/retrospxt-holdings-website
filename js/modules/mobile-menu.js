@@ -482,3 +482,6 @@ class MobileMenuModule {
         this.checkMobileState();
     }
 }
+
+// Make MobileMenuModule available globally
+window.MobileMenuModule = MobileMenuModule;

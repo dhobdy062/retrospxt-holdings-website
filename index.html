@@ -568,16 +568,19 @@
         </div>
     </div>
  
-    <!-- Original script for compatibility -->
-    <script src="script.js"></script>
-    <!-- Modular JavaScript Architecture (additional) -->
-    <script type="module" src="js/modules/navigation.js"></script>
-    <script type="module" src="js/modules/scroll-effects.js"></script>
-    <script type="module" src="js/modules/animations.js"></script>
-    <script type="module" src="js/modules/modals.js"></script>
-    <script type="module" src="js/modules/forms.js"></script>
-    <script type="module" src="js/modules/mobile-menu.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Load modules first -->
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/scroll-effects.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/modules/modals.js"></script>
+    <script src="js/modules/forms.js"></script>
+    <script src="js/modules/mobile-menu.js"></script>
+    
+    <!-- Load main app after modules -->
+    <script src="js/app.js"></script>
 </body>
 </html>
 

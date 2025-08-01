@@ -357,3 +357,6 @@ class ModalsModule {
         this.config.focusTrap = false;
     }
 }
+
+// Make ModalsModule available globally
+window.ModalsModule = ModalsModule;

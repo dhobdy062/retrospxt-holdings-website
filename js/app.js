@@ -3,6 +3,32 @@
  * Main Application Controller
  */
 
+// Modules will be loaded via script tags
+console.log('App.js loaded, waiting for modules...');
+
+// Check if modules are available
+function checkModulesLoaded() {
+    const modules = {
+        NavigationModule: window.NavigationModule,
+        ScrollEffectsModule: window.ScrollEffectsModule,
+        AnimationsModule: window.AnimationsModule,
+        ModalsModule: window.ModalsModule,
+        FormsModule: window.FormsModule,
+        MobileMenuModule: window.MobileMenuModule
+    };
+    
+    console.log('Checking modules:', modules);
+    
+    const allLoaded = Object.values(modules).every(module => module !== undefined);
+    if (allLoaded) {
+        console.log('All modules loaded successfully');
+        return true;
+    } else {
+        console.log('Some modules not loaded yet');
+        return false;
+    }
+}
+
 class RetrospxtApp {
     constructor() {
         this.config = {
@@ -72,12 +98,18 @@ class RetrospxtApp {
      * Initialize all modules
      */
     initializeModules() {
-        this.navigation = new NavigationModule(this);
-        this.scrollEffects = new ScrollEffectsModule(this);
-        this.animations = new AnimationsModule(this);
-        this.modals = new ModalsModule(this);
-        this.forms = new FormsModule(this);
-        this.mobileMenu = new MobileMenuModule(this);
+        if (!checkModulesLoaded()) {
+            console.log('Modules not ready, retrying in 100ms...');
+            setTimeout(() => this.initializeModules(), 100);
+            return;
+        }
+        
+        this.navigation = new window.NavigationModule(this);
+        this.scrollEffects = new window.ScrollEffectsModule(this);
+        this.animations = new window.AnimationsModule(this);
+        this.modals = new window.ModalsModule(this);
+        this.forms = new window.FormsModule(this);
+        this.mobileMenu = new window.MobileMenuModule(this);
     }
     
     /**

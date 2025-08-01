@@ -219,3 +219,6 @@ class ScrollEffectsModule {
         window.removeEventListener('resize', this.handleResize);
     }
 }
+
+// Make ScrollEffectsModule available globally
+window.ScrollEffectsModule = ScrollEffectsModule;
