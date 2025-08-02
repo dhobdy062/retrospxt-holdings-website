@@ -69,10 +69,28 @@ class RetrospxtApp {
     }
     
     /**
+     * Check if all required modules are loaded
+     */
+    checkModulesLoaded() {
+        const requiredModules = [
+            'NavigationModule',
+            'ScrollEffectsModule', 
+            'AnimationsModule',
+            'ModalsModule',
+            'FormsModule',
+            'MobileMenuModule'
+        ];
+        
+        return requiredModules.every(moduleName => 
+            typeof window[moduleName] === 'function'
+        );
+    }
+
+    /**
      * Initialize all modules
      */
     initializeModules() {
-        if (!checkModulesLoaded()) {
+        if (!this.checkModulesLoaded()) {
             console.log('Modules not ready, retrying in 100ms...');
             setTimeout(() => this.initializeModules(), 100);
             return;

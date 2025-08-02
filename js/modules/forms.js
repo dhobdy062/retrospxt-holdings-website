@@ -382,15 +382,42 @@ class FormsModule {
      * Submit community form
      */
     async submitCommunityForm(data) {
-        // Simulate API call
-        await this.delay(1000);
-        
-        console.log('Community join request:', data);
-        
-        return {
-            success: true,
-            message: 'Welcome to our community! Check your email for next steps.'
-        };
+        try {
+            // Prepare form data for API
+            const formData = {
+                name: data['member-name'] || data.name,
+                email: data['member-email'] || data.email,
+                company: data['member-company'] || data.company,
+                businessSize: data['business-size'] || data.businessSize,
+                aiExperience: data['ai-experience'] || data.aiExperience,
+                newsletterOptIn: data['newsletter-opt-in'] === 'on' || data.newsletterOptIn === true
+            };
+            
+            // Send to backend API
+            const response = await fetch('/api/community-join', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(result.message || 'Failed to submit form');
+            }
+            
+            return result;
+            
+        } catch (error) {
+            console.error('Error submitting community form:', error);
+            
+            // Fallback to console logging if API fails
+            console.log('Community join request (fallback):', data);
+            
+            throw new Error('Unable to submit form. Please try again later.');
+        }
     }
     
     /**
