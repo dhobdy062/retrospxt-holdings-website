@@ -339,6 +339,3 @@ class AnimationsModule {
         return this.animate(element, 'bounce-in');
     }
 }
-
-// Make AnimationsModule available globally
-window.AnimationsModule = AnimationsModule;

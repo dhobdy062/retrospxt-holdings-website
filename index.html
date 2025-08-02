@@ -36,7 +36,7 @@
             </div>
             <div class="nav-cta">
                 <button class="btn-secondary" onclick="openModal('community-modal')">Join Community</button>
-                <button class="btn-primary" onclick="openModal('schedule-modal')">Schedule Consultation</button>
+                <button class="btn-primary" onclick="openModal('schedule-modal')">Book Appointment</button>
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -60,7 +60,7 @@
                 </p>
                 <div class="hero-cta">
                     <button class="btn-primary large" onclick="openModal('schedule-modal')">
-                        Schedule Consultation
+                        Book Appointment
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -447,58 +447,34 @@
 
     <!-- Modals -->
     <div id="schedule-modal" class="modal">
-        <div class="modal-content glass-card">
+        <div class="modal-content glass-card booking-modal">
             <span class="close" onclick="closeModal('schedule-modal')">&times;</span>
-            <h2>Schedule a Consultation</h2>
+            <h2>Book Your Appointment</h2>
             <p>Let's discuss how AI can transform your business. Choose a time that works for you.</p>
             
-            <form id="schedule-form" class="glass-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your name" required>
-                        <label for="name">Full Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="contact-email" placeholder="Your email" required>
-                        <label for="contact-email">Email Address</label>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="company-name" placeholder="Company name" required>
-                        <label for="company-name">Company Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Phone number">
-                        <label for="phone">Phone Number</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <select id="service-interest" required>
-                        <option value="">Select your primary interest</option>
-                        <option value="ai-voice">AI Voice Agents</option>
-                        <option value="automation">Marketing Automation</option>
-                        <option value="custom">Custom Solutions (Tulbox)</option>
-                        <option value="training">Training Programs</option>
-                        <option value="general">General Consultation</option>
-                    </select>
-                    <label for="service-interest">Service Interest</label>
-                </div>
-                
-                <div class="form-group">
-                    <textarea id="message" placeholder="Tell us about your business and goals" rows="4"></textarea>
-                    <label for="message">Message (Optional)</label>
-                </div>
-                
-                <button type="submit" class="btn-primary full-width">
-                    Schedule Consultation
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/>
-                    </svg>
-                </button>
-            </form>
+            <!-- Setmore Booking Widget -->
+            <div class="booking-widget-container">
+                <iframe 
+                    src="https://retrospxt.setmore.com/beta" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0"
+                    style="border: none; border-radius: 12px; background: rgba(255, 255, 255, 0.1);"
+                    title="Schedule Appointment with Retrospxt Holdings">
+                </iframe>
+            </div>
+            
+            <!-- Fallback link in case iframe doesn't load -->
+            <div class="booking-fallback">
+                <p>Having trouble with the booking widget? 
+                    <a href="https://retrospxt.setmore.com/beta" target="_blank" class="booking-link">
+                        Click here to book directly
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 
@@ -568,19 +544,16 @@
         </div>
     </div>
  
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-    
-    <!-- Load modules first -->
-    <script src="js/modules/navigation.js"></script>
-    <script src="js/modules/scroll-effects.js"></script>
-    <script src="js/modules/animations.js"></script>
-    <script src="js/modules/modals.js"></script>
-    <script src="js/modules/forms.js"></script>
-    <script src="js/modules/mobile-menu.js"></script>
-    
-    <!-- Load main app after modules -->
-    <script src="js/app.js"></script>
+    <!-- Original script for compatibility -->
+    <script src="script.js"></script>
+    <!-- Modular JavaScript Architecture (additional) -->
+    <script type="module" src="js/modules/navigation.js"></script>
+    <script type="module" src="js/modules/scroll-effects.js"></script>
+    <script type="module" src="js/modules/animations.js"></script>
+    <script type="module" src="js/modules/modals.js"></script>
+    <script type="module" src="js/modules/forms.js"></script>
+    <script type="module" src="js/modules/mobile-menu.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
 

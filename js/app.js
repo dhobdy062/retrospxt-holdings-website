@@ -3,32 +3,6 @@
  * Main Application Controller
  */
 
-// Modules will be loaded via script tags
-console.log('App.js loaded, waiting for modules...');
-
-// Check if modules are available
-function checkModulesLoaded() {
-    const modules = {
-        NavigationModule: window.NavigationModule,
-        ScrollEffectsModule: window.ScrollEffectsModule,
-        AnimationsModule: window.AnimationsModule,
-        ModalsModule: window.ModalsModule,
-        FormsModule: window.FormsModule,
-        MobileMenuModule: window.MobileMenuModule
-    };
-    
-    console.log('Checking modules:', modules);
-    
-    const allLoaded = Object.values(modules).every(module => module !== undefined);
-    if (allLoaded) {
-        console.log('All modules loaded successfully');
-        return true;
-    } else {
-        console.log('Some modules not loaded yet');
-        return false;
-    }
-}
-
 class RetrospxtApp {
     constructor() {
         this.config = {
@@ -171,3 +145,6 @@ const app = new RetrospxtApp();
 
 // Export for global access
 window.RetrospxtApp = app;
+
+// Export the app instance
+export default app;

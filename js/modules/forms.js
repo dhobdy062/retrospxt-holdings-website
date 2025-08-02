@@ -542,6 +542,3 @@ class FormsModule {
         errorInputs.forEach(input => input.classList.remove('error'));
     }
 }
-
-// Make FormsModule available globally
-window.FormsModule = FormsModule;

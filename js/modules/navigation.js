@@ -191,6 +191,3 @@ class NavigationModule {
         return this.state.isScrolled;
     }
 }
-
-// Make NavigationModule available globally
-window.NavigationModule = NavigationModule;

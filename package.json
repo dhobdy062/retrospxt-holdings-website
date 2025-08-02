@@ -1,0 +1,28 @@
+{
+  "name": "retrospxt-holdings-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for Retrospxt Holdings LLC, featuring AI-powered business solutions, training programs, and community engagement.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "composio": "node composio-integration.js",
+    "start": "python -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhobdy062/retrospxt-holdings-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dhobdy062/retrospxt-holdings-website/issues"
+  },
+  "homepage": "https://github.com/dhobdy062/retrospxt-holdings-website#readme",
+  "dependencies": {
+    "@composio/core": "^0.1.39",
+    "dotenv": "^17.2.1",
+    "openai": "^5.11.0"
+  }
+}
