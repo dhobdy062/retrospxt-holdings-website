@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAPI Integration Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: white;
+        }
+        .test-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: rgba(34, 197, 94, 0.2); border: 1px solid #22c55e; }
+        .error { background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; }
+        .info { background: rgba(59, 130, 246, 0.2); border: 1px solid #3b82f6; }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>VAPI Integration Test</h1>
+    
+    <div class="test-section">
+        <h2>Environment Check</h2>
+        <div id="env-status"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>VAPI SDK Status</h2>
+        <div id="vapi-status"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Integration Test</h2>
+        <button onclick="testVapiIntegration()">Test VAPI Integration</button>
+        <button onclick="testButtonClick()">Test Button Click</button>
+        <div id="test-results"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Live Test</h2>
+        <p>Go to the main website and click the "AI Agent Active" button in the hero section.</p>
+        <a href="/" style="color: #667eea;">← Back to Main Website</a>
+    </div>
+
+    <!-- VAPI Configuration -->
+    <script>
+        window.VAPI_PUBLIC_KEY = 'demo-mode-key';
+    </script>
+    
+    <!-- VAPI Mock SDK -->
+    <script src="js/vapi-mock.js"></script>
+    
+    <!-- VAPI Web SDK (will use mock if this fails to load) -->
+    <script src="https://unpkg.com/@vapi-ai/web@latest/dist/index.js" onerror="console.log('VAPI SDK failed to load, using mock')"></script>
+    
+    <script>
+        // Environment check
+        function checkEnvironment() {
+            const envStatus = document.getElementById('env-status');
+            let html = '';
+            
+            html += `<div class="status info">VAPI_PUBLIC_KEY: ${window.VAPI_PUBLIC_KEY || 'Not set'}</div>`;
+            html += `<div class="status ${window.Vapi ? 'success' : 'error'}">VAPI SDK: ${window.Vapi ? 'Loaded' : 'Not loaded'}</div>`;
+            html += `<div class="status ${window.VAPI_MOCK_MODE ? 'info' : 'success'}">Mode: ${window.VAPI_MOCK_MODE ? 'Mock' : 'Real'}</div>`;
+            
+            envStatus.innerHTML = html;
+        }
+        
+        // VAPI status check
+        function checkVapiStatus() {
+            const vapiStatus = document.getElementById('vapi-status');
+            let html = '';
+            
+            if (window.Vapi) {
+                try {
+                    const vapi = new window.Vapi(window.VAPI_PUBLIC_KEY);
+                    html += '<div class="status success">VAPI instance created successfully</div>';
+                    html += `<div class="status info">Public Key: ${window.VAPI_PUBLIC_KEY}</div>`;
+                    html += `<div class="status info">Mock Mode: ${window.VAPI_MOCK_MODE ? 'Yes' : 'No'}</div>`;
+                } catch (error) {
+                    html += `<div class="status error">VAPI initialization failed: ${error.message}</div>`;
+                }
+            } else {
+                html += '<div class="status error">VAPI SDK not available</div>';
+            }
+            
+            vapiStatus.innerHTML = html;
+        }
+        
+        // Test VAPI integration
+        function testVapiIntegration() {
+            const results = document.getElementById('test-results');
+            results.innerHTML = '<div class="status info">Testing VAPI integration...</div>';
+            
+            try {
+                if (window.VapiIntegration) {
+                    const integration = new window.VapiIntegration();
+                    results.innerHTML += '<div class="status success">VapiIntegration class instantiated</div>';
+                    results.innerHTML += `<div class="status info">Demo mode: ${integration.demoMode}</div>`;
+                } else {
+                    results.innerHTML += '<div class="status error">VapiIntegration class not found</div>';
+                }
+            } catch (error) {
+                results.innerHTML += `<div class="status error">Integration test failed: ${error.message}</div>`;
+            }
+        }
+        
+        // Test button click simulation
+        function testButtonClick() {
+            const results = document.getElementById('test-results');
+            
+            // Try to find the AI Agent Active button
+            const button = document.querySelector('.floating-card .card-content');
+            if (button) {
+                results.innerHTML += '<div class="status success">AI Agent Active button found</div>';
+                results.innerHTML += '<div class="status info">Button click simulation would work on main page</div>';
+            } else {
+                results.innerHTML += '<div class="status info">AI Agent Active button not found (normal on test page)</div>';
+            }
+        }
+        
+        // Run checks on page load
+        window.addEventListener('load', () => {
+            checkEnvironment();
+            checkVapiStatus();
+        });
+    </script>
+</body>
+</html>

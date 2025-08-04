@@ -102,6 +102,9 @@ class RetrospxtApp {
         this.modals = new window.ModalsModule(this);
         this.forms = new window.FormsModule(this);
         this.mobileMenu = new window.MobileMenuModule(this);
+        
+        // Initialize VAPI integration if available
+        this.initializeVapi();
     }
     
     /**
@@ -135,12 +138,34 @@ class RetrospxtApp {
     }
     
     /**
+     * Initialize VAPI voice integration
+     */
+    async initializeVapi() {
+        try {
+            // Check if VAPI is enabled and configured
+            if (window.VAPI_PUBLIC_KEY && typeof window.VapiIntegration === 'function') {
+                this.vapi = new window.VapiIntegration();
+                console.log('VAPI integration initialized successfully');
+            } else {
+                console.log('VAPI not configured or module not loaded');
+            }
+        } catch (error) {
+            console.warn('Failed to initialize VAPI:', error);
+        }
+    }
+
+    /**
      * Cleanup resources
      */
     cleanup() {
         // Clean up observers and event listeners
         this.observers.forEach(observer => observer.disconnect());
         this.observers.clear();
+        
+        // Clean up VAPI if initialized
+        if (this.vapi && typeof this.vapi.cleanup === 'function') {
+            this.vapi.cleanup();
+        }
     }
     
     /**
