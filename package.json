@@ -30,6 +30,7 @@
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@vapi-ai/server-sdk": "^0.10.0",
     "@vapi-ai/web": "^2.3.8",
+    "@vercel/sdk": "^1.10.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",

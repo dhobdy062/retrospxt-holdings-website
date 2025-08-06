@@ -72,10 +72,15 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="floating-card">
-                    <div class="card-content">
+                <!-- VAPI Widget with floating styling -->
+                <div class="floating-vapi-container">
+                    <vapi-widget 
+                        assistant-id="32849d6f-41ac-49c2-a9c2-fd739ca2eed0" 
+                        public-key="aff5e99d-8932-496d-a975-1a8925b60c8b">
+                    </vapi-widget>
+                    <div class="vapi-label">
                         <div class="ai-indicator"></div>
-                        <span>AI Agent Active</span>
+                        <span>AI Voice Assistant</span>
                     </div>
                 </div>
             </div>
@@ -95,7 +100,7 @@
             <div class="services-grid">
                 <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
-                        <img src="assets/images/ai-voice-icon.png" alt="AI Voice Agents">
+                        <img src="assets/images/Assistant_A_futuristic_cyborg,_c.jpeg" alt="AI Voice Agents">
                     </div>
                     <h3>AI Voice Agents</h3>
                     <p>Intelligent conversational AI that handles customer interactions 24/7, providing personalized experiences and driving engagement.</p>
@@ -254,101 +259,63 @@
     <!-- Community Section -->
     <section id="community" class="community">
         <div class="container">
-            <div class="section-header">
-                <h2>Join Our Community</h2>
-                <p>Connect with forward-thinking business leaders implementing AI strategies</p>
-            </div>
-            
-            <div class="community-grid">
-                <div class="community-benefit glass-card">
-                    <div class="benefit-icon">🌟</div>
-                    <h3>Exclusive Access</h3>
-                    <p>Get early access to new tools, resources, and training materials before they're publicly available.</p>
-                </div>
-                
-                <div class="community-benefit glass-card">
-                    <div class="benefit-icon">💬</div>
-                    <h3>Expert Q&A Sessions</h3>
-                    <p>Monthly live sessions with AI experts answering your specific business questions.</p>
-                </div>
-                
-                <div class="community-benefit glass-card">
-                    <div class="benefit-icon">🤝</div>
-                    <h3>Peer Networking</h3>
-                    <p>Connect with other business owners facing similar AI implementation challenges.</p>
-                </div>
-                
-                <div class="community-benefit glass-card">
-                    <div class="benefit-icon">📚</div>
-                    <h3>Resource Library</h3>
-                    <p>Access our comprehensive library of templates, guides, and implementation frameworks.</p>
-                </div>
-            </div>
-            
-            <div class="community-cta">
-                <button class="btn-primary large" onclick="openModal('community-modal')">Join Community</button>
-                <p class="community-note">Free to join • 1,500+ active members</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Insights</h2>
-                <p>Stay ahead with our latest thoughts on AI, automation, and business transformation</p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-image">
-                        <div class="blog-category">AI Strategy</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>The Future of AI Voice Agents in Small Business</h3>
-                        <p>Discover how AI voice agents are revolutionizing customer service and sales for small businesses, with practical implementation strategies.</p>
-                        <div class="blog-meta">
-                            <span class="blog-date">December 15, 2024</span>
-                            <span class="blog-read-time">5 min read</span>
+            <div class="community-content">
+                <div class="community-text">
+                    <h2>Join Our Growing Community</h2>
+                    <p class="section-subtitle">Connect with 1,500+ business leaders implementing AI strategies</p>
+                    <p>Our community is where small business owners share experiences, learn from each other, and get expert guidance on AI implementation. It's completely free to join and packed with valuable resources.</p>
+                    
+                    <div class="community-features">
+                        <div class="feature-grid">
+                            <div class="feature-card glass-card">
+                                <div class="feature-icon">💬</div>
+                                <h4>Expert Q&A Sessions</h4>
+                                <p>Monthly live sessions with AI implementation experts</p>
+                            </div>
+                            <div class="feature-card glass-card">
+                                <div class="feature-icon">📚</div>
+                                <h4>Resource Library</h4>
+                                <p>Access to templates, guides, and implementation frameworks</p>
+                            </div>
+                            <div class="feature-card glass-card">
+                                <div class="feature-icon">🤝</div>
+                                <h4>Peer Support</h4>
+                                <p>Connect with business owners facing similar challenges</p>
+                            </div>
+                            <div class="feature-card glass-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Success Stories</h4>
+                                <p>Learn from real implementations and case studies</p>
+                            </div>
                         </div>
-                        <a href="#" class="blog-link">Read More →</a>
                     </div>
-                </article>
+                    
+                    <div class="community-cta">
+                        <button class="btn-primary large" onclick="openModal('community-modal')">
+                            Join Free Community
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
                 
-                <article class="blog-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-image">
-                        <div class="blog-category">Automation</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Marketing Automation That Actually Works</h3>
-                        <p>Cut through the hype and learn which marketing automation strategies deliver real ROI for growing businesses.</p>
-                        <div class="blog-meta">
-                            <span class="blog-date">December 10, 2024</span>
-                            <span class="blog-read-time">7 min read</span>
+                <div class="community-visual">
+                    <div class="community-stats">
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">1,500+</span>
+                            <span class="stat-label">Active Members</span>
                         </div>
-                        <a href="#" class="blog-link">Read More →</a>
-                    </div>
-                </article>
-                
-                <article class="blog-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-image">
-                        <div class="blog-category">Community</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Building AI-Ready Teams: A Leadership Guide</h3>
-                        <p>Essential strategies for preparing your team for AI integration, from training to change management.</p>
-                        <div class="blog-meta">
-                            <span class="blog-date">December 5, 2024</span>
-                            <span class="blog-read-time">6 min read</span>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Expert Sessions</span>
                         </div>
-                        <a href="#" class="blog-link">Read More →</a>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Success Stories</span>
+                        </div>
                     </div>
-                </article>
-            </div>
-            
-            <div class="blog-cta">
-                <button class="btn-primary" onclick="openModal('newsletter-modal')">Subscribe for More Insights</button>
+                </div>
             </div>
         </div>
     </section>
@@ -359,16 +326,32 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Retrospxt Holdings</h2>
-                    <p class="section-subtitle">Pioneering the future of business through intelligent automation and community-driven learning</p>
+                    <p class="section-subtitle">Enabling the future for businesses through agentic solutions, training, and thought leadership</p>
+                    <p>Founded on the belief that every business deserves access to cutting-edge AI technology, Retrospxt Holdings LLC specializes in making artificial intelligence accessible and actionable for small and medium businesses.</p>
                     
-                    <p>Founded on the belief that every business deserves access to cutting-edge AI technology, Retrospxt Holdings LLC has been at the forefront of making artificial intelligence accessible and practical for small and medium businesses.</p>
+                    <p>Our comprehensive approach combines hands-on implementation with community-driven learning, ensuring that businesses don't just adopt AI technology—they master it. Through our sub-brands Tulbox (custom solutions) and Build Happy People (training programs), we've helped hundreds of businesses transform their operations and achieve sustainable growth.</p>
                     
-                    <p>Our mission extends beyond just providing technology solutions. We're building a community of forward-thinking business leaders who understand that the future belongs to those who can effectively integrate AI into their operations while maintaining the human touch that makes businesses special.</p>
-                    
-                    <div class="about-stats">
+                    <div class="about-values">
+                        <div class="value-item">
+                            <h4>🎯 Purpose-Driven</h4>
+                            <p>Every solution we build serves a real business need and drives measurable results.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>🤝 Community-Focused</h4>
+                            <p>We believe in the power of shared learning and collaborative growth.</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>🚀 Innovation-Led</h4>
+                            <p>We stay at the forefront of AI technology to bring you tomorrow's solutions today.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stats-grid">
                         <div class="stat-card glass-card">
                             <span class="stat-number">3+</span>
-                            <span class="stat-label">Years of Innovation</span>
+                            <span class="stat-label">Years of Excellence</span>
                         </div>
                         <div class="stat-card glass-card">
                             <span class="stat-number">1000+</span>
@@ -544,18 +527,54 @@
             </form>
         </div>
     </div>
- 
-    <!-- VAPI Configuration -->
+    
+    <!-- VAPI Widget Script -->
     <script>
-        // VAPI Configuration - Replace with your actual public key
-        window.VAPI_PUBLIC_KEY = 'demo-mode-key';
+        // VAPI Configuration - Using the correct public key that matches the widget
+        window.VAPI_PUBLIC_KEY = 'aff5e99d-8932-496d-a975-1a8925b60c8b';
+        
+        // Dynamic VAPI SDK loading with ORB bypass
+        function loadVapiSDK() {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.js';
+                script.crossOrigin = 'anonymous';
+                script.onload = () => {
+                    console.log('VAPI SDK loaded successfully');
+                    resolve();
+                };
+                script.onerror = () => {
+                    console.log('VAPI SDK failed to load from CDN, trying alternative...');
+                    // Try alternative CDN
+                    const altScript = document.createElement('script');
+                    altScript.src = 'https://unpkg.com/@vapi-ai/web@2.3.8/dist/index.js';
+                    altScript.crossOrigin = 'anonymous';
+                    altScript.onload = () => {
+                        console.log('VAPI SDK loaded from alternative CDN');
+                        resolve();
+                    };
+                    altScript.onerror = () => {
+                        console.log('All VAPI SDK sources failed, using mock');
+                        reject();
+                    };
+                    document.head.appendChild(altScript);
+                };
+                document.head.appendChild(script);
+            });
+        }
+        
+        // Load VAPI SDK when DOM is ready
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                await loadVapiSDK();
+            } catch (error) {
+                console.log('Using VAPI mock implementation');
+            }
+        });
     </script>
     
     <!-- VAPI Mock SDK (fallback) -->
     <script src="js/vapi-mock.js"></script>
-    
-    <!-- VAPI Web SDK (will use mock if this fails to load) -->
-    <script src="https://unpkg.com/@vapi-ai/web@latest/dist/index.js" onerror="console.log('VAPI SDK failed to load, using mock')"></script>
     
     <!-- Original script for compatibility -->
     <script src="script.js"></script>
@@ -566,7 +585,6 @@
     <script type="module" src="js/modules/modals.js"></script>
     <script type="module" src="js/modules/forms.js"></script>
     <script type="module" src="js/modules/mobile-menu.js"></script>
-    <script type="module" src="js/modules/vapi-integration.js"></script>
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
