@@ -601,8 +601,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Export functions for global access
-window.openModal = openModal;
-window.closeModal = closeModal;
-window.scrollToTop = scrollToTop;
+// Export functions for global access (browser compatible)
+if (typeof window !== 'undefined') {
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+    window.scrollToTop = scrollToTop;
+}
 
